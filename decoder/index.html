@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decoder – stažení a instalace</title>
+<style>
+  :root {
+    --bg: #0f1220;
+    --card: #1a1e33;
+    --card2: #22284a;
+    --text: #e8eaf6;
+    --muted: #9aa0c3;
+    --accent: #7c9eff;
+    --ok: #4ade80;
+    --bad: #f87171;
+    --warn-bg: #3a2f14;
+    --warn-border: #eab308;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  header { text-align: center; margin-bottom: 2rem; }
+  .logo {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: .5rem;
+  }
+  h1 { margin: 0 0 .25rem; font-size: 2rem; }
+  .sub { color: var(--muted); margin: 0; }
+  .btn {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #6366f1, #7c9eff);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border-radius: 14px;
+    margin: 1.5rem 0 .5rem;
+    box-shadow: 0 6px 20px rgba(99, 102, 241, .35);
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn small { display: block; font-weight: 400; font-size: .8rem; opacity: .85; }
+  .req { text-align: center; color: var(--muted); font-size: .85rem; margin: 0 0 2rem; }
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .card h2 { margin-top: 0; font-size: 1.2rem; }
+  ul.features { padding-left: 1.2rem; margin: 0; }
+  ul.features li { margin: .3rem 0; }
+  .ok { color: var(--ok); }
+  .bad { color: var(--bad); }
+  .warn {
+    background: var(--warn-bg);
+    border-left: 4px solid var(--warn-border);
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    margin: 0 0 1rem;
+    font-size: .95rem;
+  }
+  ol.steps { padding-left: 0; margin: 0; list-style: none; counter-reset: step; }
+  ol.steps li {
+    counter-increment: step;
+    position: relative;
+    padding: .6rem 0 .6rem 3rem;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  ol.steps li:last-child { border-bottom: none; }
+  ol.steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: .7rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--card2);
+    color: var(--accent);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  ol.steps b { color: #fff; }
+  .tip {
+    font-size: .9rem;
+    color: var(--muted);
+    background: var(--card2);
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    margin-top: 1rem;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+    margin-top: 2rem;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">🔎</div>
+    <h1>Decoder</h1>
+    <p class="sub">Přehled zadaných kódů – které byly správně a které ne</p>
+  </header>
+
+  <a class="btn" href="decoder.apk" download>
+    ⬇️ Stáhnout decoder.apk
+    <small>verze 1.0 · ~5 MB</small>
+  </a>
+  <p class="req">Vyžaduje Android 7.0 nebo novější a připojení k internetu</p>
+
+  <div class="card">
+    <h2>Co aplikace umí</h2>
+    <ul class="features">
+      <li>Načte všechny zadané kódy a sjednotí duplicity</li>
+      <li>U každého kódu ukáže <span class="ok">✓ správně</span> nebo <span class="bad">✗ špatně</span></li>
+      <li>Vyhledávání v kódech</li>
+      <li>Filtr: vše / správně / špatně</li>
+      <li>Řazení A→Z / Z→A</li>
+      <li>Obnovení dat tlačítkem nebo přetažením dolů</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⚠️ Instalace na Android</h2>
+    <p class="warn">
+      Aplikace <b>není z Google Play</b> – instaluje se ručně z APK souboru.
+      Android proto zobrazí varování a je potřeba <b>povolit instalaci z neznámých zdrojů</b>.
+      U aplikací mimo Google Play je to normální.
+    </p>
+    <ol class="steps">
+      <li><b>Stáhněte APK</b> tlačítkem nahoře (přímo v telefonu).</li>
+      <li><b>Otevřete stažený soubor</b> – klepněte na <code>decoder.apk</code> v notifikaci o stažení, nebo ho najděte v aplikaci <i>Soubory</i> ve složce <i>Stažené</i>.</li>
+      <li><b>Povolte instalaci z neznámých zdrojů</b> – Android ukáže hlášku typu „Z bezpečnostních důvodů nemůže telefon instalovat neznámé aplikace z tohoto zdroje“. Klepněte na <b>Nastavení</b>, zapněte <b>Povolit z tohoto zdroje</b> a vraťte se zpět. (Povolení se dává aplikaci, ze které APK otevíráte – typicky Chrome nebo Soubory.)</li>
+      <li><b>Klepněte na Instalovat</b> a počkejte na dokončení.</li>
+      <li>Pokud se ozve <b>Play Protect</b>, že aplikaci nezná, zvolte <b>Přesto nainstalovat</b> (bývá schované pod <i>Další podrobnosti</i>).</li>
+      <li>Hotovo – aplikaci <b>Decoder</b> najdete v seznamu aplikací. 🎉</li>
+    </ol>
+    <p class="tip">
+      💡 Tip: Povolení z kroku 3 můžete po instalaci zase vypnout v
+      <b>Nastavení → Aplikace → (Chrome / Soubory) → Instalace neznámých aplikací</b>.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Proč Android varuje?</h2>
+    <p style="margin:0">
+      Google Play kontroluje aplikace před zveřejněním – u ručně instalovaných APK to
+      udělat nemůže, proto se ptá. Tento APK je podepsaný vývojářský build; instalujte
+      ho jen pokud jste ho stáhli z této stránky.
+    </p>
+  </div>
+
+  <footer>
+    <a href="/">← zpět na mikipoldi.github.io</a>
+  </footer>
+
+</div>
+</body>
+</html>
